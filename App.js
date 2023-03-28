@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { View, ScrollView, StyleSheet, Text, hov } from "react-native";
-import Filme from "./src/components/Filme";
+import { View, ScrollView, StyleSheet, Text } from "react-native";
+import Musica from "./src/components/Musica";
 
-const filmes = [
+
+const musicas = [
   {
     nome: "Né segredo",
     artista: "Cabelinho",
@@ -26,19 +27,19 @@ const filmes = [
 ];
 
 
-const ListaFilmes = () => {
-  const [filmesList, setFilmesList] = useState(filmes);
+const ListaMusicas = () => {
+  const [musicasList, setMusicasList] = useState(musicas);
 
   const handleRemove = (index) => {
-    const newFilmesList = [...filmesList];
-    newFilmesList.splice(index, 1);
-    setFilmesList(newFilmesList);
+    const newMusicasList = [...musicasList];
+    newMusicasList.splice(index, 1);
+    setMusicasList(newMusicasList);
   };
 
   return (
     <ScrollView style={styles.scroll}>
-      {filmesList.map((filme, index) => (
-        <Filme key={index} filme={filme} onRemove={() => handleRemove(index)}  />
+      {musicasList.map((musica, index) => (
+        <Musica key={index} musica={musica} onRemove={() => handleRemove(index)}  />
       ))}
     </ScrollView>
   );
@@ -48,7 +49,7 @@ export default function App() {
   return (
     <View style={styles.content}>
       <Text style={styles.title}>la Vega</Text>
-      <ListaFilmes />
+      <ListaMusicas />
     </View>
   );
 }
