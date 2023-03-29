@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { Feather } from '@expo/vector-icons';
+// import { Feather } from '@expo/vector-icons';
 
 const Musica = ({ musica, onRemove }) => {
   return (
@@ -11,7 +11,7 @@ const Musica = ({ musica, onRemove }) => {
         <Text style={styles.text2}>{musica.artista}</Text>
         <TouchableOpacity onPress={onRemove}>
           {/* <Text style={styles.delete}>Remover</Text> */}
-          <Feather style={styles.delete} name="delete" size={24} color="black" />
+          {/* <Feather style={styles.delete} name="delete" size={24} color="black" /> */}
         </TouchableOpacity>
       </View>
     </View>
