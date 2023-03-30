@@ -23,7 +23,12 @@ const musicas = [
     nome: "Bonjour",
     artista: "Kayblack",
     imagem: "https://i1.sndcdn.com/artworks-wmlh1iqlTNdcaLIx-2adkfg-t500x500.jpg"
-  }
+  },
+  {
+    nome: "Congratulations",
+    artista: "Post Malone",
+    imagem: "https://akamai.sscdn.co/uploadfile/letras/albuns/0/6/2/2/554011482151252.jpg"
+  },
 ];
 
 
