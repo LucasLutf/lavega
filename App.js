@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, ScrollView, StyleSheet, Text } from "react-native";
 import Musica from "./src/components/Musica";
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 const musicas = [
@@ -42,20 +43,26 @@ const ListaMusicas = () => {
   };
 
   return (
-    <ScrollView style={styles.scroll}>
-      {musicasList.map((musica, index) => (
-        <Musica key={index} musica={musica} onRemove={() => handleRemove(index)}  />
-      ))}
-    </ScrollView>
+ 
+      <ScrollView style={styles.scroll}>
+        {musicasList.map((musica, index) => (
+          <Musica key={index} musica={musica} onRemove={() => handleRemove(index)}/>
+        ))}
+      </ScrollView>
   );
 };
 
 export default function App() {
   return (
-    <View style={styles.content}>
-      <Text style={styles.title}>la Vega</Text>
-      <ListaMusicas />
-    </View>
+    <LinearGradient
+    colors={['#191919', '#000000']}
+    style={styles.gradient}
+  >
+      <View style={styles.content}>
+        <Text style={styles.title}>la Vega</Text>
+        <ListaMusicas />
+      </View>
+    </LinearGradient>
   );
 }
 
@@ -69,11 +76,16 @@ const styles = StyleSheet.create({
     height: 80,
     paddingTop: 30,
   },
+  gradient: {
+    flex: 1,
+  },
   scroll: {
     padding: 20,
-    backgroundColor: '#212121'
-  },
-  content: {
-    flex: 1,
+    backgroundColor: 'rgba(255, 255, 255, 0.0)',
+    borderRadius: 10,
+    marginTop: 20,
+    marginBottom: 20,
+    marginLeft: 10,
+    marginRight: 10,
   },
 });
