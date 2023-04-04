@@ -55,7 +55,7 @@ const ListaMusicas = () => {
 export default function App() {
   return (
     <LinearGradient
-    colors={['#191919', '#000000']}
+    colors={['#494949', '#000000']}
     style={styles.gradient}
   >
       <View style={styles.content}>
@@ -72,9 +72,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: 'white',
     textAlign: "center",
-    backgroundColor: "#000",
-    height: 80,
-    paddingTop: 30,
+    backgroundColor: 'rgba(0, 0, 0)',
+    opacity: 0.5,
+    height: 100,
+    paddingTop: 45,
   },
   gradient: {
     flex: 1,
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: 'rgba(255, 255, 255, 0.0)',
     borderRadius: 10,
-    marginTop: 20,
+    // marginTop: 20
     marginBottom: 20,
     marginLeft: 10,
     marginRight: 10,
